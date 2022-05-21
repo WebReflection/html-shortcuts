@@ -1,9 +1,17 @@
+const CALLBACK = 'Callback';
 const EMPTY = '';
 const HEADING = 'Heading';
 const TABLECELL = 'TableCell';
 const TABLE_SECTION = 'TableSection';
 
 export const ELEMENT = 'Element';
+export const CONSTRUCTOR = 'constructor';
+export const PROTOTYPE = 'prototype';
+export const ATTRIBUTE_CHANGED_CALLBACK = 'attributeChanged' + CALLBACK;
+export const CONNECTED_CALLBACK = 'connected' + CALLBACK;
+export const DISCONNECTED_CALLBACK = 'dis' + CONNECTED_CALLBACK;
+export const UPGRADED_CALLBACK = 'upgraded' + CALLBACK;
+export const DOWNGRADED_CALLBACK = 'downgraded' + CALLBACK;
 
 export const qualify = name => ('HTML' + (namespace[name] || '') + ELEMENT);
 
