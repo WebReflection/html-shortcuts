@@ -13,7 +13,7 @@ export const DISCONNECTED_CALLBACK = 'dis' + CONNECTED_CALLBACK;
 export const UPGRADED_CALLBACK = 'upgraded' + CALLBACK;
 export const DOWNGRADED_CALLBACK = 'downgraded' + CALLBACK;
 
-export const qualify = name => ('HTML' + (namespace[name] || '') + ELEMENT);
+export const qualify = name => ('HTML' + (name in namespace ? namespace[name] : name) + ELEMENT);
 
 export const namespace = {
   A: 'Anchor',

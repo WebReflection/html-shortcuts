@@ -22,7 +22,7 @@ exports.UPGRADED_CALLBACK = UPGRADED_CALLBACK;
 const DOWNGRADED_CALLBACK = 'downgraded' + CALLBACK;
 exports.DOWNGRADED_CALLBACK = DOWNGRADED_CALLBACK;
 
-const qualify = name => ('HTML' + (namespace[name] || '') + ELEMENT);
+const qualify = name => ('HTML' + (name in namespace ? namespace[name] : name) + ELEMENT);
 exports.qualify = qualify;
 
 const namespace = {
